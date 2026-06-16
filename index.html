@@ -3,91 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student e-Portfolio | Project 2</title>
+    <title>e-Portfolio | Muhammad Furqan</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-sdg-blue { background-color: #26bde2; }
+        .text-sdg-blue { color: #26bde2; }
+    </style>
 </head>
-<body class="bg-slate-900 text-slate-100 font-sans">
+<body class="bg-slate-900 text-slate-100 font-sans leading-relaxed">
 
-    <nav class="sticky top-0 bg-slate-900/90 backdrop-blur-sm border-b border-slate-700 p-4 z-50">
-        <div class="container mx-auto flex flex-wrap gap-4 justify-center">
-            <a href="#profile" class="hover:text-blue-400">Profile</a>
-            <a href="#labs" class="hover:text-blue-400">Labs</a>
-            <a href="#projects" class="hover:text-blue-400">Projects</a>
-            <a href="#reflection" class="hover:text-blue-400">Reflection</a>
-            <a href="#skills" class="hover:text-blue-400">Skills</a>
+    <nav class="sticky top-0 bg-slate-900/90 backdrop-blur border-b border-slate-700 p-4 z-50">
+        <div class="container mx-auto flex flex-wrap gap-6 justify-center text-sm uppercase tracking-wider font-bold">
+            <a href="#home" class="hover:text-sdg-blue">Home</a>
+            <a href="#labs" class="hover:text-sdg-blue">Labs</a>
+            <a href="#projects" class="hover:text-sdg-blue">Projects</a>
+            <a href="#reflection" class="hover:text-sdg-blue">Reflection</a>
+            <a href="#skills" class="hover:text-sdg-blue">Skills</a>
         </div>
     </nav>
 
     <main class="container mx-auto p-6 md:p-12 space-y-20">
         
-        <section id="profile" class="bg-slate-800 p-8 rounded-2xl border border-slate-700">
-            <h1 class="text-4xl font-black mb-4">Student Profile</h1>
-            <p><strong>Name:</strong> [Insert Name] | <strong>Matric No:</strong> [Insert No]</p>
-            <p><strong>Programme:</strong> [Insert Programme] | <strong>Instructor:</strong> [Insert Name]</p>
-            <div class="mt-6 space-y-4">
-                <p><strong>Intro:</strong> [Insert short bio here]</p>
-                <p><strong>Goal:</strong> [Insert learning goals here]</p>
-                <p class="text-blue-400 font-bold"><strong>SDG 6 Statement:</strong> [Insert your one-line water impact statement]</p>
+        <!-- Profile -->
+        <section id="home" class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+            <h1 class="text-5xl font-black mb-6">Muhammad Furqan bin Mohamad Firwance</h1>
+            <div class="grid md:grid-cols-2 gap-4 mb-8 text-slate-400">
+                <p><strong>Matric No:</strong> A221089</p>
+                <p><strong>Programme:</strong> Software Engineering</p>
+                <p><strong>Instructor:</strong> Mr Nelson</p>
             </div>
+            <p class="text-xl mb-4">Passionate software engineering student dedicated to building impactful digital solutions. I strive to combine clean UI design with robust backend architecture to solve real-world problems.</p>
+            <p class="text-sdg-blue font-bold text-lg">SDG 6: Clean Water and Sanitation, because access to clean water is a fundamental human right and a cornerstone of sustainable health and development.</p>
         </section>
 
+        <!-- Labs -->
         <section id="labs">
-            <h2 class="text-3xl font-bold mb-8">Lab Submissions</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <script>
-                    const labs = [1,2,3,4,5];
-                    labs.forEach(num => {
-                        document.write(`
-                        <div class="bg-slate-800 p-6 rounded-2xl border border-slate-700">
-                            <h3 class="text-xl font-bold mb-2">Lab ${num}</h3>
-                            <div class="bg-slate-700 h-40 mb-4 flex items-center justify-center text-slate-500 rounded-lg">[Screenshot Placeholder]</div>
-                            <a href="#" class="block text-blue-400 underline mb-2">YouTube Video Link</a>
-                            <p class="text-sm opacity-80 italic">[Reflection Placeholder]</p>
-                        </div>`);
-                    });
-                </script>
+            <h2 class="text-3xl font-bold mb-10">Lab Submissions</h2>
+            <div class="grid md:grid-cols-1 gap-8">
+                
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-sdg-blue mb-4">Lab 1: Basic Layout with Jetpack Compose</h3>
+                    <div class="aspect-video mb-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/mXX8btrdR5o" allowfullscreen></iframe></div>
+                    <p class="font-semibold mb-2">Reflection:</p>
+                    <p class="text-slate-400 italic">This lab introduced me to the declarative nature of Jetpack Compose. I learned how to structure UI using Column, Row, and Box, realizing how much cleaner it is compared to the traditional XML layouts.</p>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-sdg-blue mb-4">Lab 2: Interaction</h3>
+                    <div class="aspect-video mb-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/wGaTlr2te0Q" allowfullscreen></iframe></div>
+                    <p class="font-semibold mb-2">Reflection:</p>
+                    <p class="text-slate-400 italic">Learned the power of State management. Building interactive elements showed me how Compose updates the UI automatically when data changes—a massive improvement for user experience.</p>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-sdg-blue mb-4">Lab 3: Material Design</h3>
+                    <div class="aspect-video mb-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/T_kGQV16bBE" allowfullscreen></iframe></div>
+                    <p class="font-semibold mb-2">Reflection:</p>
+                    <p class="text-slate-400 italic">Implementing Material Design 3 made the app feel professional instantly. Using themes, typography, and elevation helped me understand how to build visually consistent applications.</p>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-sdg-blue mb-4">Lab 4: Navigation</h3>
+                    <div class="aspect-video mb-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/ab8SVMa0720" allowfullscreen></iframe></div>
+                    <p class="font-semibold mb-2">Reflection:</p>
+                    <p class="text-slate-400 italic">Navigation was the key to unlocking complex app flows. I learned how to pass arguments between screens and manage the back stack effectively using NavHost.</p>
+                </div>
+
+                <div class="bg-slate-800 p-8 rounded-3xl border border-slate-700">
+                    <h3 class="text-2xl font-bold text-sdg-blue mb-4">Lab 5: Room (Database)</h3>
+                    <div class="aspect-video mb-6"><iframe class="w-full h-full rounded-xl" src="https://www.youtube.com/embed/gPGi-BmrqRI" allowfullscreen></iframe></div>
+                    <p class="font-semibold mb-2">Reflection:</p>
+                    <p class="text-slate-400 italic">Room taught me about data persistence. Storing user logs locally is crucial for offline availability, and working with DAOs and Entities sharpened my backend logic.</p>
+                </div>
             </div>
         </section>
 
-        <section id="projects" class="space-y-8">
+        <!-- Projects -->
+        <section id="projects" class="space-y-12">
             <h2 class="text-3xl font-bold">Project Submissions</h2>
             
-            <div class="bg-slate-800 p-8 rounded-2xl border-l-4 border-blue-500">
-                <h3 class="text-2xl font-bold mb-4">Project 1</h3>
-                <p class="mb-2"><strong>Problem:</strong> [Insert Problem Statement]</p>
-                <a href="#" class="block text-blue-400 underline">YouTube VSR | GitHub Repo</a>
-                <p class="mt-4 opacity-80"><strong>Lessons Learned:</strong> [Insert lessons]</p>
+            <div class="bg-slate-800 p-8 rounded-3xl border-l-8 border-sdg-blue">
+                <h3 class="text-3xl font-bold mb-4">Project 1: Clean Water</h3>
+                <p class="mb-2"><strong>Problem:</strong> Clean water is essential, but people waste it due to lack of awareness. My app helps users track their daily consumption and promotes sustainable habits.</p>
+                <div class="my-6"><iframe class="w-full h-64 rounded-xl" src="https://www.youtube.com/embed/Bykq8zMM1fY" allowfullscreen></iframe></div>
+                <a href="https://drive.google.com/file/d/1BKRVeLflNsXs7eTipRGwnD0W7SgC86eL/view?usp=sharing" class="text-sdg-blue underline font-bold">GitHub / Source Link</a>
+                <p class="mt-4"><strong>Lessons Learned:</strong> This project taught me how to bridge the gap between simple UI layouts and functional user input. I learned to troubleshoot state errors during real-time calculation of water usage.</p>
             </div>
 
-            <div class="bg-slate-800 p-8 rounded-2xl border-l-4 border-green-500">
-                <h3 class="text-2xl font-bold mb-4">Project 2</h3>
-                <p class="mb-2"><strong>Problem:</strong> [Insert Problem Statement]</p>
-                <a href="#" class="block text-blue-400 underline">YouTube VSR | GitHub Repo</a>
-                <p class="mt-4 opacity-80"><strong>Lessons Learned:</strong> [Insert lessons]</p>
+            <div class="bg-slate-800 p-8 rounded-3xl border-l-8 border-green-500">
+                <h3 class="text-3xl font-bold mb-4">Project 2: Clean Water 2.0</h3>
+                <p class="mb-2"><strong>Problem:</strong> Reactive infrastructure maintenance leads to massive water loss. My app bridges hardware monitoring and community action through real-time feeds, live API data, and smart dashboards.</p>
+                <div class="my-6"><iframe class="w-full h-64 rounded-xl" src="https://www.youtube.com/embed/EYvzAv9C4JM" allowfullscreen></iframe></div>
+                <a href="https://drive.google.com/file/d/1uhqZzyasEYiUcLQ7j_PRR4FmaJ82FNws/view?usp=sharing" class="text-green-500 underline font-bold">GitHub / Source Link</a>
+                <p class="mt-4"><strong>Lessons Learned:</strong> This was a massive growth step. Integrating external APIs and cloud storage taught me how to handle asynchronous data streams and the importance of offline-first architecture for real-world impact.</p>
             </div>
         </section>
 
+        <!-- Footer Sections -->
         <div class="grid md:grid-cols-2 gap-8">
-            <section id="reflection" class="bg-slate-800 p-8 rounded-2xl">
-                <h2 class="text-2xl font-bold mb-4">Reflection</h2>
-                <p class="opacity-80">[Insert deep reflection on growth, challenges, and SDG impact here]</p>
+            <section id="reflection" class="bg-slate-800 p-8 rounded-3xl">
+                <h2 class="text-2xl font-bold mb-4">Reflection & Learning Journey</h2>
+                <p class="text-slate-400">From the basics of Lab 1 to the complex cloud-synced architecture of Project 2, my journey has been transformative. I overcame challenges in data synchronization and asynchronous API handling, ultimately building a tool that contributes to SDG 6. This process has shaped me into a more confident developer capable of building end-to-end software solutions.</p>
             </section>
             
-            <section id="skills" class="bg-slate-800 p-8 rounded-2xl">
-                <h2 class="text-2xl font-bold mb-4">Tech Stack</h2>
-                <ul class="list-disc ml-5 opacity-80">
-                    <li>Kotlin, Jetpack Compose</li>
-                    <li>Room Database</li>
-                    <li>Firebase Cloud Firestore</li>
-                    <li>Retrofit API</li>
-                    <li>Git & GitHub</li>
-                </ul>
+            <section id="skills" class="bg-slate-800 p-8 rounded-3xl">
+                <h2 class="text-2xl font-bold mb-4">Tech Stack & Resources</h2>
+                <p class="font-bold">Skills:</p>
+                <p class="mb-4">Kotlin, Jetpack Compose, Room Database, Firebase Firestore, Retrofit API, Git/GitHub, Android Studio.</p>
+                <p class="font-bold">Resources:</p>
+                <p class="text-slate-400">Open-Meteo API, Google Firebase Documentation, Material Design 3 Guidelines. Acknowledgment: This portfolio was developed with the assistance of Gemini AI for code optimization and architectural guidance.</p>
             </section>
         </div>
 
-        <section id="resources" class="text-center opacity-60 text-sm">
-            <p>Resources: [APIs Used] | Acknowledgements: Built with AI assistance (Gemini)</p>
-        </section>
+        <footer class="text-center text-slate-500 pt-10 border-t border-slate-800">
+            <p>&copy; 2026 Muhammad Furqan bin Mohamad Firwance | A221089</p>
+        </footer>
     </main>
 </body>
 </html>
