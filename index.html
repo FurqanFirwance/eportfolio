@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Furqan bin Mohamad Firwance | Clean Water Application eProtfolio</title>
+    <title>Muhammad Furqan | Engineering Portfolio</title>
     <style>
         :root {
             --accent: #38bdf8;
@@ -16,43 +16,43 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 
-        /* Floating Nav */
         nav { 
             position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
-            background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px);
-            padding: 12px 30px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);
-            display: flex; gap: 20px; z-index: 1000;
+            background: rgba(15, 23, 42, 0.8); backdrop-filter: blur(12px);
+            padding: 15px 40px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);
+            display: flex; justify-content: space-between; align-items: center;
+            width: 90%; max-width: 1000px; z-index: 1000;
         }
+        .brand { font-size: 1.4rem; font-weight: 800; color: var(--accent); letter-spacing: -0.5px; }
+        .nav-links { display: flex; gap: 20px; }
         nav a { color: var(--text); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: var(--accent); }
 
-        .container { max-width: 900px; margin: 0 auto; padding: 100px 20px; }
-
-        /* Hero */
-        .hero { text-align: center; padding: 60px 0; }
-        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; background: linear-gradient(to right, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .container { max-width: 900px; margin: 0 auto; padding: 120px 20px; }
+        .hero { text-align: center; padding: 40px 0; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; color: #fff; }
         
-        /* Sections */
-        h2 { font-size: 2rem; margin: 40px 0 20px; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; }
-        .card { background: var(--surface); padding: 30px; border-radius: 16px; margin-bottom: 25px; border: 1px solid #1e293b; }
+        h2 { font-size: 2rem; margin: 50px 0 25px; color: var(--accent); border-left: 4px solid var(--accent); padding-left: 15px; }
+        .card { background: var(--surface); padding: 30px; border-radius: 16px; margin-bottom: 25px; border: 1px solid #1e293b; transition: 0.3s; }
+        .card:hover { border-color: var(--accent); }
         
-        /* Video Container */
         .video-box { width: 100%; aspect-ratio: 16/9; margin: 20px 0; border-radius: 10px; overflow: hidden; background: #000; }
         iframe { width: 100%; height: 100%; border: none; }
 
         .btn { display: inline-block; padding: 10px 20px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: bold; border-radius: 6px; margin-top: 15px; }
-        
         footer { text-align: center; padding: 50px; color: var(--muted); font-size: 0.9rem; }
     </style>
 </head>
 <body>
 
 <nav>
-    <a href="#home">Home</a>
-    <a href="#labs">Labs</a>
-    <a href="#projects">Projects</a>
-    <a href="#reflection">Reflection</a>
-    <a href="#skills">Skills</a>
+    <div class="brand">Clean Water</div>
+    <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#labs">Labs</a>
+        <a href="#projects">Projects</a>
+        <a href="#reflection">Reflection</a>
+    </div>
 </nav>
 
 <div class="container" id="home">
@@ -60,8 +60,8 @@
         <h1>Muhammad Furqan</h1>
         <p>Software Engineering Student | Matric No: A221089</p>
         <p>Programme: Software Engineering | Instructor: Mr Nelson</p>
-        <p style="margin-top: 20px; font-style: italic;">"Dedicated to building scalable, user-centric mobile applications that drive meaningful social impact."</p>
-        <p style="color: var(--accent); margin-top: 10px;">SDG 6: Clean Water and Sanitation, because access to clean water is a fundamental human right essential for sustainable health and development.</p>
+        <p style="margin-top: 25px; color: var(--muted);">"Dedicated to building scalable, user-centric mobile applications that drive meaningful social impact."</p>
+        <p style="color: var(--accent); margin-top: 10px; font-weight: 600;">SDG 6: Clean Water and Sanitation — because access to clean water is a fundamental human right essential for sustainable health and development.</p>
     </section>
 
     <section id="labs">
@@ -70,31 +70,31 @@
         <div class="card">
             <h3>Lab 1: Basic Layout with Jetpack Compose</h3>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/mXX8btrdR5o"></iframe></div>
-            <p><strong>Reflection:</strong> This lab served as my foundational step into declarative UI development. I learned to leverage Composable functions to replace legacy XML, realizing the efficiency and speed of modern Android UI creation.</p>
+            <p><strong>Reflection:</strong> This lab was my gateway into declarative UI design. Moving from XML to Jetpack Compose forced me to rethink how layouts are constructed. I learned the power of composable functions and how creating modular UI components leads to cleaner, more maintainable code compared to the traditional hierarchical XML approach.</p>
         </div>
 
         <div class="card">
             <h3>Lab 2: Interaction</h3>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/wGaTlr2te0Q"></iframe></div>
-            <p><strong>Reflection:</strong> By implementing state-based interactions, I grasped how UI components should react to user events in real-time. This solidified my understanding of state hoisting in Jetpack Compose.</p>
+            <p><strong>Reflection:</strong> I focused on state management in this lab. Understanding the difference between stateful and stateless composables was crucial. By managing user inputs and trigger events, I learned how Compose automatically recomposes the UI, ensuring that the app remains synchronized with the underlying data model.</p>
         </div>
 
         <div class="card">
             <h3>Lab 3: Material Design</h3>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/T_kGQV16bBE"></iframe></div>
-            <p><strong>Reflection:</strong> Material Design 3 implementation taught me the importance of visual hierarchy and theme consistency. It transformed my basic layouts into professional, industry-standard interfaces.</p>
+            <p><strong>Reflection:</strong> Implementing Material Design 3 taught me that a great app is not just functional but also intuitive. I focused on using consistent typography, color schemes, and elevation. This experience deepened my appreciation for design language as a tool to improve user retention and accessibility.</p>
         </div>
 
         <div class="card">
             <h3>Lab 4: Navigation</h3>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/ab8SVMa0720"></iframe></div>
-            <p><strong>Reflection:</strong> Navigating between screens highlighted the importance of a clean architecture. Managing the backstack and passing parameters correctly was crucial for building a cohesive multi-screen application.</p>
+            <p><strong>Reflection:</strong> Navigating through multiple screens taught me the importance of the NavHost and backstack management. Passing data between screens was a significant challenge that required a solid grasp of argument passing and clean architectural separation, ensuring the app feels like a unified experience.</p>
         </div>
 
         <div class="card">
-            <h3>Lab 5: Room(Database)</h3>
+            <h3>Lab 5: Room (Database)</h3>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/gPGi-BmrqRI"></iframe></div>
-            <p><strong>Reflection:</strong> Integrating Room was a breakthrough in data management. I learned how to define Entities and DAOs to persist user data locally, ensuring my application remains reliable even without internet access.</p>
+            <p><strong>Reflection:</strong> Persistence was the missing piece of my app's architecture. By integrating the Room Database, I learned to abstract data access through DAOs and Entities. The ability to cache data locally transformed my app from a simple interface into a robust, offline-capable tool, providing a seamless user experience.</p>
         </div>
     </section>
 
@@ -103,42 +103,42 @@
         
         <div class="card">
             <h3>Clean Water (Project 1)</h3>
-            <p><strong>Problem Statement:</strong> Clean water and proper sanitation are essential for healthy communities, but many people still waste water due to a lack of awareness and monitoring tools. Excessive water usage leads to shortages, environmental damage, and higher costs.</p>
+            <p><strong>Problem Statement:</strong> Excessive water usage leads to shortages and higher costs. This project provides a simple tracker to help users monitor their daily habits and promote sustainable consumption.</p>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/Bykq8zMM1fY"></iframe></div>
             <a href="https://drive.google.com/file/d/1BKRVeLflNsXs7eTipRGwnD0W7SgC86eL/view?usp=sharing" class="btn">View Source</a>
-            <p style="margin-top:20px;"><strong>Lessons learned:</strong> This project taught me the importance of user-centric design. I learned to manage complex state transitions and ensure that user feedback is handled gracefully within the application lifecycle.</p>
+            <p style="margin-top:20px;"><strong>Lessons learned:</strong> Project 1 taught me the balance between UI complexity and functional utility. I learned how to handle user data input reliably and the critical importance of input validation to prevent errors during real-time usage calculations.</p>
         </div>
 
         <div class="card">
             <h3>Clean Water 2.0 (Project 2)</h3>
-            <p><strong>Problem Statement:</strong> Water scarcity and infrastructure decay are critical hurdles. Currently, reactive maintenance leads to thousands of liters of lost water daily. This project bridges hardware monitoring and community action through real-time feeds, live meteorological API data, and smart dashboards.</p>
+            <p><strong>Problem Statement:</strong> Reactive maintenance causes massive water loss. This project advances the first iteration by integrating hardware sensor data, live weather APIs, and cloud syncing via Firebase to bridge the gap between monitoring and active conservation.</p>
             <div class="video-box"><iframe src="https://www.youtube.com/embed/EYvzAv9C4JM"></iframe></div>
             <a href="https://drive.google.com/file/d/1uhqZzyasEYiUcLQ7j_PRR4FmaJ82FNws/view?usp=sharing" class="btn">View Source</a>
-            <p style="margin-top:20px;"><strong>Lessons learned:</strong> Scaling this application taught me the power of integration. By combining Retrofit for live weather data, Room for local persistence, and Firebase for cloud syncing, I learned how to build a robust, production-ready system capable of handling asynchronous data flows.</p>
+            <p style="margin-top:20px;"><strong>Lessons learned:</strong> This project was a major milestone in my technical growth. By integrating Retrofit for live weather updates and Firestore for cloud synchronization, I learned the complexities of asynchronous data handling. I also gained experience in hardware-software integration, which reinforced the importance of building robust systems that remain stable under real-world conditions.</p>
         </div>
     </section>
 
     <section id="reflection">
-        <h2>Reflection & Learning Journey</h2>
+        <h2>Reflection & Journey</h2>
         <div class="card">
-            <p>My journey from Lab 1 to Project 2 has been a rigorous progression in software engineering. Starting with basic layout structures, I progressively mastered complex architecture, asynchronous data handling, and cloud synchronization. Overcoming the initial challenges of API integration and database consistency taught me that engineering is as much about persistent debugging as it is about creative design, ultimately allowing me to develop solutions that address critical real-world issues like water scarcity.</p>
+            <p>From the initial challenges of Lab 1 to the sophisticated cloud-synced architecture of Project 2, my journey has been a progression of constant technical growth. I learned that software engineering is not just about writing code; it is about architectural planning, data integrity, and solving real-world problems. Navigating through API integration and synchronization hurdles has taught me persistence and critical thinking, ultimately allowing me to deliver a solution that meaningfully contributes to SDG 6.</p>
         </div>
     </section>
 
     <section id="skills">
         <h2>Skills & Tech Stack</h2>
         <div class="card">
-            <p><strong>Languages & Frameworks:</strong> Kotlin, Jetpack Compose, Android SDK</p>
-            <p><strong>Architecture & Database:</strong> MVVM, Room Database, SQLite</p>
-            <p><strong>Network & Cloud:</strong> Retrofit (REST APIs), Firebase Firestore, Firebase Authentication</p>
-            <p><strong>Version Control & Tools:</strong> Git, GitHub, Android Studio</p>
+            <p><strong>Core:</strong> Kotlin, Jetpack Compose, Android SDK</p>
+            <p><strong>Architecture & Database:</strong> MVVM Architecture, Room Database, SQLite</p>
+            <p><strong>Network & Cloud:</strong> Retrofit, REST API Integration, Firebase Firestore, Firebase Authentication</p>
+            <p><strong>Tools:</strong> Git, GitHub, Android Studio, Figma</p>
         </div>
     </section>
 
     <section id="resources">
         <h2>Resources</h2>
         <div class="card">
-            <p><strong>APIs & Libraries:</strong> Open-Meteo Weather API, Android Material Design 3, Retrofit, Coil (for image loading), Google Firebase SDK.</p>
+            <p><strong>APIs & Libraries:</strong> Open-Meteo Weather API, Android Material Design 3, Retrofit, Coil, Google Firebase SDK.</p>
             <p style="margin-top:10px;"><em>Acknowledgement:</em> This portfolio and application development were supported by Gemini AI, which assisted in architectural planning, code optimization, and implementation strategies.</p>
         </div>
     </section>
