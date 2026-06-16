@@ -3,83 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Portfolio | Muhammad Furqan</title>
+    <title>Muhammad Furqan | Engineering Portfolio</title>
     <style>
         :root {
-            --primary: #26bde2;
-            --bg: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.7);
-            --text: #f1f5f9;
-            --text-dim: #94a3b8;
+            --accent: #38bdf8;
+            --bg: #020617;
+            --surface: #0f172a;
+            --text: #f8fafc;
+            --muted: #94a3b8;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            background-image: radial-gradient(circle at top right, #1e293b, #0f172a);
-        }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
 
-        /* Navigation */
-        nav {
-            position: sticky; top: 0; z-index: 1000;
-            background: rgba(15, 23, 42, 0.8);
-            backdrop-filter: blur(10px);
-            padding: 1.5rem;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            display: flex; justify-content: center; gap: 2rem;
+        /* Floating Nav */
+        nav { 
+            position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+            background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(12px);
+            padding: 12px 30px; border-radius: 50px; border: 1px solid rgba(255,255,255,0.1);
+            display: flex; gap: 20px; z-index: 1000;
         }
-        nav a { 
-            color: var(--text); text-decoration: none; font-weight: 600; 
-            font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: var(--primary); }
+        nav a { color: var(--text); text-decoration: none; font-size: 0.85rem; font-weight: 500; transition: color 0.3s; }
+        nav a:hover { color: var(--accent); }
 
-        /* Container & Sections */
-        .container { max-width: 1100px; margin: 0 auto; padding: 2rem; }
-        section { padding: 4rem 0; }
+        .container { max-width: 900px; margin: 0 auto; padding: 100px 20px; }
+
+        /* Hero */
+        .hero { text-align: center; padding: 60px 0; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; background: linear-gradient(to right, #fff, var(--accent)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
-        /* Typography */
-        h1, h2 { color: var(--primary); margin-bottom: 1.5rem; }
-        h1 { font-size: 3rem; }
+        /* Sections */
+        h2 { font-size: 2rem; margin: 40px 0 20px; color: var(--accent); }
+        .card { background: var(--surface); padding: 30px; border-radius: 16px; margin-bottom: 25px; border: 1px solid #1e293b; }
         
-        /* Cards */
-        .card { 
-            background: var(--card-bg);
-            backdrop-filter: blur(5px);
-            padding: 2rem;
-            border-radius: 20px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: transform 0.3s, border-color 0.3s;
-        }
-        .card:hover { border-color: var(--primary); transform: translateY(-5px); }
-        
-        /* Grids */
-        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
-        
-        /* Video Embed */
-        .video-container { 
-            position: relative; width: 100%; aspect-ratio: 16/9; margin: 1.5rem 0;
-            border-radius: 12px; overflow: hidden; background: #000;
-        }
+        /* Video Container */
+        .video-box { width: 100%; aspect-ratio: 16/9; margin: 20px 0; border-radius: 10px; overflow: hidden; background: #000; }
         iframe { width: 100%; height: 100%; border: none; }
 
-        /* Buttons */
-        .btn { 
-            display: inline-block; background: var(--primary); color: white;
-            padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 8px;
-            font-weight: bold; margin-top: 1rem; transition: background 0.3s;
-        }
-        .btn:hover { background: #1a9fb8; }
+        .btn { display: inline-block; padding: 10px 20px; background: var(--accent); color: var(--bg); text-decoration: none; font-weight: bold; border-radius: 6px; margin-top: 15px; }
 
-        /* Footer */
-        footer { text-align: center; padding: 4rem; color: var(--text-dim); }
-
-        @media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+        footer { text-align: center; padding: 50px; color: var(--muted); font-size: 0.9rem; }
     </style>
 </head>
 <body>
@@ -88,91 +51,76 @@
     <a href="#home">Home</a>
     <a href="#labs">Labs</a>
     <a href="#projects">Projects</a>
-    <a href="#reflection">Reflection</a>
-    <a href="#skills">Skills</a>
+    <a href="#reflection">Growth</a>
 </nav>
 
-<div class="container">
-    <section id="home">
-        <div class="card">
-            <h1>Muhammad Furqan</h1>
-            <p style="font-size: 1.2rem; margin-bottom: 1rem;">Software Engineering Student | Matric: A221089</p>
-            <p><strong>Programme:</strong> Software Engineering &nbsp;•&nbsp; <strong>Instructor:</strong> Mr Nelson</p>
-            <hr style="margin: 2rem 0; border: 0; border-top: 1px solid #334155;">
-            <p style="font-size: 1.1rem;">Passionate developer building digital solutions. I combine clean UI design with robust backend architecture to solve real-world problems.</p>
-            <p style="margin-top: 1rem; color: var(--primary);"><strong>SDG 6: Clean Water and Sanitation</strong> — because access to clean water is a fundamental human right.</p>
-        </div>
+<div class="container" id="home">
+    <section class="hero">
+        <h1>Muhammad Furqan</h1>
+        <p>Software Engineering Student | A221089</p>
+        <p style="color: var(--muted); margin-top: 10px;">Building sustainable digital infrastructure for SDG 6.</p>
     </section>
 
     <section id="labs">
-        <h2>Lab Submissions</h2>
-        <div class="grid-2">
-            <div class="card">
-                <h3>Lab 1: UI</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/mXX8btrdR5o"></iframe></div>
-                <p><strong>Reflection:</strong> This lab introduced me to the declarative nature of Jetpack Compose. I learned how to structure UI using Column, Row, and Box.</p>
-            </div>
-            <div class="card">
-                <h3>Lab 2: Interaction</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/wGaTlr2te0Q"></iframe></div>
-                <p><strong>Reflection:</strong> Learned the power of State management. Building interactive elements showed me how Compose updates the UI automatically when data changes.</p>
-            </div>
-            <div class="card">
-                <h3>Lab 3: Material Design</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/T_kGQV16bBE"></iframe></div>
-                <p><strong>Reflection:</strong> Implementing Material Design 3 made the app feel professional. Using themes and typography helped me build visually consistent apps.</p>
-            </div>
-            <div class="card">
-                <h3>Lab 4: Navigation</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/ab8SVMa0720"></iframe></div>
-                <p><strong>Reflection:</strong> Navigation was the key to unlocking complex app flows. I learned how to pass arguments between screens effectively.</p>
-            </div>
-            <div class="card">
-                <h3>Lab 5: Room Database</h3>
-                <div class="video-container"><iframe src="https://www.youtube.com/embed/gPGi-BmrqRI"></iframe></div>
-                <p><strong>Reflection:</strong> Room taught me about data persistence. Storing user logs locally is crucial for offline availability.</p>
-            </div>
+        <h2>Laboratory Work</h2>
+        <!-- Lab 1 -->
+        <div class="card">
+            <h3>Lab 1: UI Implementation</h3>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/mXX8btrdR5o"></iframe></div>
+            <p><strong>Reflection:</strong> Mastered Jetpack Compose layouts (Row/Column) to create responsive UI, moving away from legacy XML designs.</p>
+        </div>
+        <!-- Lab 2 -->
+        <div class="card">
+            <h3>Lab 2: Interaction</h3>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/wGaTlr2te0Q"></iframe></div>
+            <p><strong>Reflection:</strong> Learned to handle UI state effectively, ensuring the interface reacts dynamically to user inputs.</p>
+        </div>
+        <!-- Lab 3 -->
+        <div class="card">
+            <h3>Lab 3: Material Design</h3>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/T_kGQV16bBE"></iframe></div>
+            <p><strong>Reflection:</strong> Leveraged Material Design 3 to ensure aesthetic consistency and professional branding across screens.</p>
+        </div>
+        <!-- Lab 4 -->
+        <div class="card">
+            <h3>Lab 4: Navigation</h3>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/ab8SVMa0720"></iframe></div>
+            <p><strong>Reflection:</strong> Successfully implemented NavHost to enable seamless flow between different application modules.</p>
+        </div>
+        <!-- Lab 5 -->
+        <div class="card">
+            <h3>Lab 5: Room Database</h3>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/gPGi-BmrqRI"></iframe></div>
+            <p><strong>Reflection:</strong> Integrated Room for local data persistence, allowing the app to remain functional offline.</p>
         </div>
     </section>
 
     <section id="projects">
-        <h2>Projects</h2>
-        <div class="card" style="border-left: 5px solid var(--primary);">
+        <h2>Engineering Projects</h2>
+        <div class="card">
             <h3>Project 1: Clean Water</h3>
-            <p style="color: var(--text-dim);">Problem: People waste water due to lack of awareness. My app helps users track their consumption habits.</p>
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/Bykq8zMM1fY"></iframe></div>
+            <p>A water consumption tracker focused on raising awareness for sustainable usage habits.</p>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/Bykq8zMM1fY"></iframe></div>
             <a href="https://drive.google.com/file/d/1BKRVeLflNsXs7eTipRGwnD0W7SgC86eL/view?usp=sharing" class="btn">View Source</a>
-            <p style="margin-top:15px"><strong>Lessons learned:</strong> I learned how to bridge UI layouts and functional user input for real-time calculation of water usage.</p>
         </div>
-        <br>
-        <div class="card" style="border-left: 5px solid #22c55e;">
+        <div class="card">
             <h3>Project 2: Clean Water 2.0</h3>
-            <p style="color: var(--text-dim);">Problem: Reactive maintenance leads to water loss. I integrated API monitoring and hardware data to create a smart dashboard.</p>
-            <div class="video-container"><iframe src="https://www.youtube.com/embed/EYvzAv9C4JM"></iframe></div>
+            <p>Advanced iteration featuring real-time API weather integration and cloud-synced impact tracking.</p>
+            <div class="video-box"><iframe src="https://www.youtube.com/embed/EYvzAv9C4JM"></iframe></div>
             <a href="https://drive.google.com/file/d/1uhqZzyasEYiUcLQ7j_PRR4FmaJ82FNws/view?usp=sharing" class="btn">View Source</a>
-            <p style="margin-top:15px"><strong>Lessons learned:</strong> A massive growth step. Integrating external APIs and cloud storage taught me how to handle asynchronous data streams.</p>
         </div>
     </section>
 
-    <div class="grid-2">
-        <section id="reflection">
-            <div class="card">
-                <h2>Journey</h2>
-                <p>From the basics of Lab 1 to the complex cloud-synced architecture of Project 2, my journey has been transformative. I overcame challenges in data synchronization, shaping me into a more confident developer.</p>
-            </div>
-        </section>
-        <section id="skills">
-            <div class="card">
-                <h2>Skills & Tech</h2>
-                <p>Kotlin, Jetpack Compose, Room, Firebase Firestore, Retrofit, Git, Android Studio.</p>
-                <p style="margin-top:10px; font-size: 0.8rem; color: var(--text-dim);">Built with Gemini AI assistance.</p>
-            </div>
-        </section>
-    </div>
+    <section id="reflection">
+        <h2>Learning Journey</h2>
+        <div class="card">
+            <p>My journey from Lab 1 to Project 2 has been defined by overcoming complex integration challenges. By shifting from simple UI design to implementing Room, Retrofit, and Firebase, I have developed the skills to build resilient, end-to-end applications that solve real-world sustainability issues.</p>
+        </div>
+    </section>
 </div>
 
 <footer>
-    <p>&copy; 2026 Muhammad Furqan bin Mohamad Firwance</p>
+    <p>&copy; 2026 Muhammad Furqan | Software Engineering</p>
 </footer>
 
 </body>
